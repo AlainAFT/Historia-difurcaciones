@@ -39,7 +39,7 @@ int main() {
     cout<<"notas que para acceder a la cabaña tienes que ingresar un codigo"<<endl;
     cout<<"pillas una nota que da algo de informacion pero esta escondida en frase"<<endl;
     cout<<"la nota dice: Cuando te los encuentres veras que el cuarto de abajo sera util para tu supervivencia"<<endl;
-    
+    pausar();
     
     cout<<"ingrese el codigo para entrar a la cabaña"<<endl;
     int code;
