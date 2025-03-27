@@ -32,23 +32,28 @@ int main() {
     cout << "============================\n\n";
 
     cout << "  llegas a una cabaña vieja en el bosque.\n";
-    cout << "Hay rumores de que está cabaña esta maldita porque hay criaturas alrededor de ellas...\n\n";
-    pausar();
+    cout << "Hay rumores de que está cabaña esta maldita porque hay criaturas alrededor de ellas...\n";
+    cout<<"Es una cabaña que la heredaste por algun lejano familiar"<<endl;
+    cout<<"Y querias hecharle un vistazo a sus condiciones de la cabaña"<<endl;
+    cout<<"notas que para acceder a la cabaña tienes que ingresar un codigo"<<endl;
+    cout<<"pillas una nota que da algo de informacion pero esta escondida en frase"<<endl;
+    cout<<"la nota dice: Cuando te los encuentres veras que el cuarto de abajo sera util para tu supervivencia"<<endl;
     
-    cout<<"¿Decides entrar a la cabaña?"<<endl;
-    cout<<"1.SI"<<endl;
-    cout<<"2.NO"<<endl;
-    int opcion = leerEleccion("Tu elección: ");
-    if (opcion==2){
-        cout<<"FINAL OCULTO: No paso nada se supone que deberias decir si , SOBREVIVISTE "<<endl ;
-        return 0;
+    
+    cout<<"ingrese el codigo para entrar a la cabaña"<<endl;
+    int code;
+    cin>>code;
+    while (code!=34){
+        cout<<"no es el codigo correcto vuelve a intentarlo"<<endl ;
+        cin>>code;
+    
     }
     pausar();
     // Primera decisión
     cout << "Escuchas ruidos extraños en el sótano.Parece venir del sotano.\n";
     cout << "1. Bajar a investigar.\n";
     cout << "2. Ignorar los ruidos.\n";
-     opcion = leerEleccion("Tu elección: ");
+     int opcion = leerEleccion("Tu elección: ");
     if (opcion == 1) {
         investigoSotano = true;
         cout << "Encuentras un diario extraño con notas aterradoras.\n";
