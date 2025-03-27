@@ -105,6 +105,7 @@ int main() {
          cout<<"te quedan "<<vidadelanimales<<" y "<<cartuchos<<" cartuchos"<<endl;
          if(vidadelanimales==0 ){
              cout<<"mataste a todos los mounstros gracias a que sabias su lugares debiles"<<endl;
+cout<<"sobreviviste , Fin del juego"<<endl;
          }
     }
     }
@@ -119,11 +120,11 @@ int main() {
         int opcion;
         cin>>opcion;
         if(opcion==1){
-        for(cartuchos;cartuchos>0;--vidadelanimales)
+        for(cartuchos;cartuchos>0;vidadelanimales)
          cartuchos= cartuchos-1;
          cout<<"te quedanron "<<cartuchos<<" cartuchos y "<<vidadelanimales<<" mounstro"<<endl;
          if(cartuchos==0){
-             cout<<"Fallaste el disparo, te quedo uno....."<<endl;
+             cout<<"Los disparos no le hicieron nada a las bestias, te quedaron " <<vidadelanimal<<" bestias te comieron " <<endl;
              
              cout<<"Aunque intentaste sobrevivir no fue lo suficiente para salir vivo"<<endl;
          }
@@ -137,7 +138,7 @@ int main() {
         cout << "Lograste cerrar la puerta y aunque entraron , usaste la información del diario y la escopeta   para sobrevivir.\n";
         cout << "¡Sobreviviste!\n";
     } else if (investigoSotano!=1 && cerroPuerta!=1) {
-        cout << "No aprovechaste cada una de tus balas y las criaturas te atraparon.\n";
+        cout << "Las balas no le hicieron daño y las criaturas te atraparon.\n";
         cout << "Fin del juego.\n";
     } else if (cerroPuerta) {
         cout << "Cerraste la puerta, ganaste tiempo pero no sabias como enfrentarlos . No sobreviviste.\n";
