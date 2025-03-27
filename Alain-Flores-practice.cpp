@@ -78,6 +78,8 @@ int main() {
     opcion = leerEleccion("Tu elección: ");
     if(opcion==2 or opcion==3){
         cerroPuerta=false;
+    } else if (opcion==1){
+     cerroPuerta=true;
     }
 
     pausar();
@@ -104,8 +106,8 @@ int main() {
          cartuchos= cartuchos-1;
          cout<<"te quedan "<<vidadelanimales<<" y "<<cartuchos<<" cartuchos"<<endl;
          if(vidadelanimales==0 ){
-             cout<<"mataste a todos los mounstros gracias a que sabias su lugares debiles"<<endl;
-cout<<"sobreviviste , Fin del juego"<<endl;
+             cout<<"mataste a todos los mounstros gracias a que sabias su lugares debiles pero casi la palmas porque te hicieron daño"<<endl;
+cout<<"sobreviviste pero con daños , Fin del juego"<<endl;
          }
     }
     }
@@ -120,11 +122,11 @@ cout<<"sobreviviste , Fin del juego"<<endl;
         int opcion;
         cin>>opcion;
         if(opcion==1){
-        for(cartuchos;cartuchos>0;vidadelanimales)
-         cartuchos= cartuchos-1;
+        for(cartuchos;cartuchos>0;--cartuchos)
+         
          cout<<"te quedanron "<<cartuchos<<" cartuchos y "<<vidadelanimales<<" mounstro"<<endl;
          if(cartuchos==0){
-             cout<<"Los disparos no le hicieron nada a las bestias, te quedaron " <<vidadelanimal<<" bestias te comieron " <<endl;
+             cout<<"Los disparos no le hicieron nada a las bestias, te quedaron " <<vidadelanimales<<" bestias te comieron " <<endl;
              
              cout<<"Aunque intentaste sobrevivir no fue lo suficiente para salir vivo"<<endl;
          }
@@ -136,7 +138,7 @@ cout<<"sobreviviste , Fin del juego"<<endl;
     cout << "\n=== Resultado ===\n";
     if (investigoSotano && cerroPuerta) {
         cout << "Lograste cerrar la puerta y aunque entraron , usaste la información del diario y la escopeta   para sobrevivir.\n";
-        cout << "¡Sobreviviste!\n";
+        cout << "¡Sobreviviste sin daños!\n";
     } else if (investigoSotano!=1 && cerroPuerta!=1) {
         cout << "Las balas no le hicieron daño y las criaturas te atraparon.\n";
         cout << "Fin del juego.\n";
