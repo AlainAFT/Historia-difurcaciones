@@ -82,12 +82,14 @@ int main() {
 
     pausar();
     
-   // enfrentamiento 
-    if(hechizos==1){
+   
+   // final de Hechizos 
+    if(hechizos==1){ 
         cout<<"Gracias al libro que encontraste pudiste dejar una restriccion en la cabaña del tal forma que no pudieron entrar los mounstros"<<endl;
         cout<<"puedes vivir tranquilo, sobreviviste"<<endl;
         return 0;
     }
+    // combates y luego sobrevivies
     if ( cerroPuerta!=1 and investigoSotano==1){
         int vidadelanimales=4;
         int cartuchos=4;
@@ -106,6 +108,7 @@ int main() {
          }
     }
     }
+    // combates y luego mueres
     if(cerroPuerta!=1 and investigoSotano!=1){
         int vidadelanimales=5;
         int cartuchos=4;
@@ -133,11 +136,11 @@ int main() {
     if (investigoSotano && cerroPuerta) {
         cout << "Lograste cerrar la puerta y aunque entraron , usaste la información del diario y la escopeta   para sobrevivir.\n";
         cout << "¡Sobreviviste!\n";
-    } else if (investigoSotano && investigoSotano!=1) {
-        cout << "Aunque sabías lo que enfrentabas, fallaste el ultimo cartucho y las criaturas te atraparon.\n";
+    } else if (investigoSotano!=1 && cerroPuerta!=1) {
+        cout << "No aprovechaste cada una de tus balas y las criaturas te atraparon.\n";
         cout << "Fin del juego.\n";
     } else if (cerroPuerta) {
-        cout << "Cerraste la puerta, ganaste tiempo pero no sabias como enfrentarlos. No sobreviviste.\n";
+        cout << "Cerraste la puerta, ganaste tiempo pero no sabias como enfrentarlos . No sobreviviste.\n";
         cout << "Fin del juego.\n";
     } else if(hechizos==false and investigoSotano==false and cerroPuerta==false) { 
         cout << "No cerraste la puerta ni investigaste ni tenias algun hechizo. Las criaturas te encontraron como una presa fácil.\n";
@@ -146,3 +149,4 @@ int main() {
 
     return 0;
 }
+    
