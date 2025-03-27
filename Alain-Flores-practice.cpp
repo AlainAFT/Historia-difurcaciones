@@ -145,10 +145,7 @@ cout<<"sobreviviste pero con daños , Fin del juego"<<endl;
     } else if (cerroPuerta) {
         cout << "Cerraste la puerta, ganaste tiempo pero no sabias como enfrentarlos . No sobreviviste.\n";
         cout << "Fin del juego.\n";
-    } else if(hechizos==false and investigoSotano==false and cerroPuerta==false) { 
-        cout << "No cerraste la puerta ni investigaste ni tenias algun hechizo. Las criaturas te encontraron como una presa fácil.\n";
-        cout << "Fin del juego.\n";
-    }
+    } 
 
     return 0;
 }
